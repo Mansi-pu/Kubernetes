@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-config
+  namespace: test
+data:
+  name: "orange"
+  xml-core.xml:
+    Blue
+    Round
+    Tasty
+  Description: "this is env testing"

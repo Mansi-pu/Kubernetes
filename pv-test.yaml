@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: testing-pv
+  namespace: test
+  labels:
+    type: local
+spec:
+  # storageClassName: manual
+  persistentVolumeReclaimPolicy: Delete
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/tmp/data"
